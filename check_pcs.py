@@ -65,7 +65,7 @@ class NagiosCheck:
                 "Number of online nodes is less than " +str(int(args.nodes_count))
         else:
             self.status = 'OK'
-            self.message = self.message+"All " +str(int(args.nodes_count))+ " nodes are up and running."
+            self.message = self.message+"All " +str(int(args.nodes_count))+ " nodes are up and running!"
 
     def validateResources(self, pcs):
         if len(pcs.getOnlineResources()) != int(args.resources_count):
@@ -74,7 +74,7 @@ class NagiosCheck:
                 "Number of online resources is less than " +str(int(args.resources_count))
         else:
             self.status = 'OK'
-            self.message = self.message+" All " +str(int(args.resources_count))+ " resources are up and running."
+            self.message = self.message+" All " +str(int(args.resources_count))+ " resources are up and running!"
 
     def checkStatus(self):
         self.validateNodes(self.pcs)
